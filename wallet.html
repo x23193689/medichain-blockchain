@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content />
+  <meta name="description" content />
+  <meta name="author" content />
+
+  <title>MediChain</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+
+  <!-- font awesome style -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700|Roboto:400,700&display=swap" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+
+  <style>
+    .smallerBox {
+      width: 100% !important;
+      height: 200px !important;
+    }
+
+    .health_section .box .img-box img {
+      width: 50% !important;
+
+    }
+
+    #boxList::-webkit-scrollbar {
+      display: none;
+    }
+
+    .preloder{
+      height: 100vh;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #111;
+      z-index: 9999;
+    }
+
+
+    .loder{
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 5px solid #D1DFFF;
+      border-top: 8px solid #3775FF;
+      animation: spinner 1s linear infinite;
+    }
+
+    @keyframes spinner{
+      0%{
+        transform: rotate(0deg);
+
+      }
+      50%{
+        border-top-width: 5px;
+      }
+      100%{
+        transform: rotate(360deg);
+      }
+    }
+
+  </style>
+</head>
+
+<body class="sub_page">
+  <div class="preloder" style="display:none;">
+    <div class="loder">
+    </div>
+  </div>
+      <div class="hero_area">
+        <!-- header section strats -->
+        <header class="header_section">
+          <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
+              <a class="navbar-brand" href="/">
+                <img src="images/logo.png" alt>
+                <span>
+                  MediChain
+                </span>
+              </a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="d-flex  flex-column flex-lg-row align-items-center w-100 justify-content-between">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link" href="/"> Home </a>
+                    </li>
+
+                  </ul>
+                </div>
+              </div>
+
+            </nav>
+          </div>
+        </header>
+        <!-- end header section -->
+      </div>
+
+      <!-- end health section -->
+
+      <div class="row container-fluid">
+        <div class="col-6">
+          <section class="discount_section mt-5 mb-5">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-12">
+                  <div class="detail-box text-center">
+                    <h5>
+                      Live Cryptocurrency Price In Euros <span
+                        onclick="window.location.href='https://www.coingecko.com/en/api/documentation'">( <i
+                          class="fa fa-link" aria-hidden="true"></i> Click for Source)</span>
+                    </h5>
+                    <div>
+                      <a href="javascript:void(0)" id="bitCoinPrice"></a>
+                    </div>
+                    <div>
+                      <a href="javascript:void(0)" id="ethPrice"></a>
+                    </div>
+                    <div>
+                      <a href="javascript:void(0)" id="liteCoinPrice"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="col-6">
+          <section class="discount_section mt-5">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-12">
+                  <div class="detail-box text-center">
+                    <h5>
+                      Account Details
+                    </h5>
+                    <div>
+                      <a href="javascript:void(0);" id="getMyAccount">
+                        Get My Account
+                      </a>
+                    </div>
+                    <div>
+                      <a href="javascript:void(0);" id="DepoloyedContractAddress">
+                        Deployed Contract Address
+                      </a>
+                    </div>
+                    <div>
+                      <a href="javascript:void(0);" id="getBalance">
+                        Current Contract Balance
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="col-6">
+          <section class="discount_section mt-5 mb-5" style="height:300px;">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-12">
+                  <div class="detail-box text-center">
+                    <h5>
+                      Deposit Funds
+                    </h5>
+                    <div>
+                      <form>
+                        <input type="number" id="depositFundValue" class="form-control" placeholder="enter eth value.."
+                          required>
+                      </form>
+                      <a href="javascript:void(0)" id="depositFund">
+                        Deposit Funds to Contract
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+        </div>
+        <div class="col-6">
+          <section class="discount_section mt-5 mb-5" style="height:300px;">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-12">
+                  <div class="detail-box text-center">
+                    <h5>
+                      Withdraw Funds
+                    </h5>
+                    <div>
+                      <form>
+                        <input type="text" id="withdrawAddress" class="form-control" placeholder="enter address ..."
+                          required>
+                        <input type="number" id="withdrawvalue" class="mt-2 form-control"
+                          placeholder="enter eth value.." required>
+                      </form>
+                      <a href="javascript:void(0)" id="withdrawFunds">
+                        Withdraw Funds from Contract
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+    
+
+
+
+
+
+
+
+  <!-- end info section -->
+
+  <!-- footer section -->
+  <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js">
+  </script>
+  <script type="text/javascript" src="js/cart.js"></script>
+  <script type="text/javascript" src="js/web3.js"></script>
+  <script type="text/javascript" src="js/api.js"></script>
+  <script type="text/javascript">
+    $(".owl-carousel").owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: true,
+      navText: [],
+      autoplay: true,
+      responsive: {
+        0: {
+          items: 1
+        },
+        600: {
+          items: 2
+        },
+        1000: {
+          items: 4
+        }
+      }
+    });
+  </script>
+  <script type="text/javascript">
+    $(".owl-2").owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: true,
+      navText: [],
+      autoplay: true,
+
+      responsive: {
+        0: {
+          items: 1
+        },
+        600: {
+          items: 2
+        },
+        1000: {
+          items: 4
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>
