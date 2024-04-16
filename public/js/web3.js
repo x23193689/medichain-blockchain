@@ -53,7 +53,7 @@ let account = null;
       type: "function",
     },
 ];
-const contractAddress = "0xB1DD0cd19ae1322A8291b53fb646119287678efe";
+const contractAddress = "0x54624BF3dA1db02Eca1164F3cDe64301a4da12c5";
 
 
 function setCookie(name, value){
